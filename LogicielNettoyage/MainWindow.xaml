@@ -1,0 +1,60 @@
+﻿<Window x:Class="LogicielNettoyage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogicielNettoyage"
+        x:Name="fenetre"
+        mc:Ignorable="d"
+        Title="Nettoyage" Height="880" Width="1080" ResizeMode="CanResize" WindowStartupLocation="CenterScreen" Icon="/clean.png">
+
+    <Grid Margin="0,0,-169,-172">
+
+        <!--                                Header                                           -->
+
+        <Rectangle HorizontalAlignment="Left" Height="164" VerticalAlignment="Top" Width="1080" Stroke="#FFFFE259" Fill="#FF8178A5"/>
+        <Label Content="Analyse du PC nécessaire" HorizontalAlignment="Left" Margin="165,21,0,0" VerticalAlignment="Top" Width="424" Height="43" x:Name="titre" FontFamily="Consolas" FontSize="28" Foreground="#FFFFFEF7"/>
+
+        <Button Content="ANALYSER" HorizontalAlignment="Left" Margin="822,57,0,0" VerticalAlignment="Top" Width="241" Height="55" Click="Button_Analyser" Background="#FF8178A5" BorderThickness="4,4,4,4" FontFamily="Consolas" FontSize="28" Foreground="#FFF9F5F5" BorderBrush="#FFF9F4F4" x:Name="check" />
+        <Label Content="à determiner par analyse." HorizontalAlignment="Left" Name="space_to_clean" Margin="386,65,0,0" VerticalAlignment="Top" Width="335" Height="34" Foreground="#FFF7F7F3" FontFamily="Consolas" FontSize="20" Background="#FF8178A5"/>
+        <Label Content="09/12/2022" HorizontalAlignment="Left" x:Name="last_analyse" Margin="386,102,0,0" VerticalAlignment="Top" Width="335" Height="30" Foreground="#FFFDFDFC" FontFamily="Consolas" FontSize="20" Background="#FF8178A5"/>
+        <Label Content="04/12/2021" HorizontalAlignment="Left" x:Name="last_update" Margin="386,132,0,0" VerticalAlignment="Top" Width="335" Height="32" Foreground="#FFFBFBF7" FontFamily="Consolas" FontSize="20" Background="#FF8178A5"/>
+        <Label Content="Espace à nettoyer:" HorizontalAlignment="Left" x:Name="space_to_clean_Copy" Margin="164,64,0,0" VerticalAlignment="Top" Width="213" Height="34" Foreground="#FFF7F7F3" FontFamily="Consolas" FontSize="20" Background="#FF8178A5"/>
+        <Label Content="Derniere analyse:" HorizontalAlignment="Left" x:Name="space_to_clean_Copy1" Margin="165,98,0,0" VerticalAlignment="Top" Width="216" Height="34" Foreground="#FFF7F7F3" FontFamily="Consolas" FontSize="20" Background="#FF8178A5"/>
+        <Label Content="Derniere MAJ:" HorizontalAlignment="Left" x:Name="space_to_clean_Copy2" Margin="165,130,0,0" VerticalAlignment="Top" Width="216" Height="34" Foreground="#FFF7F7F3" FontFamily="Consolas" FontSize="20" Background="#FF8178A5"/>
+
+
+
+        <!--                                My Body                                         -->
+
+        <Button Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Nettoyer"  HorizontalAlignment="Left"  FontSize="28px" FontFamily="Consolas"  Foreground="White" Margin="206,221,0,0" VerticalAlignment="Top" Height="222" x:Name="clean" Width="271" Click="clean_Click" Background="#FF8178A5" BorderThickness="3,3,3,3"/>
+        <Button Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Mettre à jour"  HorizontalAlignment="Left" x:Name="Update_btn" FontSize="28px" FontFamily="Consolas"  Foreground="White" Margin="206,461,0,0" VerticalAlignment="Top" Height="222" Width="271" Click="update_Click" Background="#FF8178A5" BorderThickness="3,3,3,3"/>
+        <Button Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Historique"  HorizontalAlignment="Left" x:Name="Histo" FontSize="28px" FontFamily="Consolas"  Foreground="White" Margin="624,221,0,0" VerticalAlignment="Top" Height="222" Width="272" Click="histo_Click" Background="#FF8178A5" BorderThickness="3,3,3,3"/>
+
+        <Button Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Site web"  HorizontalAlignment="Left" x:Name="Web_btn" FontSize="28px" FontFamily="Consolas"  Foreground="White" Margin="625,461,0,0" VerticalAlignment="Top" Height="222" Width="271" Click="web_Click" Background="#FF8178A5" BorderThickness="3,3,3,3"/>
+        <Image HorizontalAlignment="Left" Height="81" Margin="300,275,0,0" VerticalAlignment="Top" Width="100" Source="/icons8-clear-64.png"/>
+        <Image HorizontalAlignment="Left" Height="81" Margin="720,275,0,0" VerticalAlignment="Top" Width="100" Source="/icons8-historique-des-activités-48.png"/>
+        <Image HorizontalAlignment="Left" Height="81" Margin="296,518,0,0" VerticalAlignment="Top" Width="100" Source="/icons8-update-60.png"/>
+        <Image HorizontalAlignment="Left" Height="81" Margin="720,518,0,0" VerticalAlignment="Top" Width="100" Source="/icons8-domaine-100.png"/>
+
+
+
+        <!--                                My Footer                                       -->
+
+
+        <Rectangle Stroke="Black" Margin="0,713,169,232" Fill="#FFCFCFE8"/>
+        <Label Content="Copyright 2022: Eliel Luwala" HorizontalAlignment="Left" FontSize="24px" FontFamily="consolas" VerticalContentAlignment="Center" Margin="0,703,0,0" VerticalAlignment="Top" Width="1080" Height="71" Background="#FFCFCFE8" Foreground="#FF121111" HorizontalContentAlignment="Center">
+            <Label.Style>
+                <Style/>
+            </Label.Style>
+        </Label>
+        <Label Content="Actualités:" HorizontalAlignment="Left" Visibility="Hidden" FontSize="24px" FontFamily="consolas" x:Name="news" VerticalContentAlignment="Center" Margin="0,777,0,0" VerticalAlignment="Top" Width="1080" Height="61" Background="#FFE8D5CF" Foreground="#FF121111" HorizontalContentAlignment="Center">
+            <Label.Style>
+                <Style/>
+            </Label.Style>
+        </Label>
+        
+
+
+    </Grid>
+</Window>
